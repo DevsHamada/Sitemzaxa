@@ -1,0 +1,300 @@
+
+body {
+   /* background-color: RGB(0,0,143);*/
+  /* Full height */
+  height: 100%;
+      font-family: Source Sans Pro;
+
+}
+#bloc_page
+{
+    width: 900px;
+    margin: auto;
+}
+section h1, footer h1, nav a
+{
+    font-family: Source Sans Pro;
+    font-weight: normal;
+    text-transform: uppercase; /* en sorte que mes titres soient toujours écrits en majuscules*/
+}
+
+  /* header */
+header 
+  {
+    height:150px;
+	width : auto;
+	display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+	position: relative;
+	
+	/*	border : 3px solid #323130;*/
+
+}
+
+img {
+ width: AUTO;
+ max-height: 100%;
+ object-fit: contain;
+
+}
+
+#logo
+ {
+	  width: 150px;
+      height: 150px;
+     display: flex;
+    flex-direction: row;
+    align-items: baseline;
+	background-color:orange;
+	
+	
+}
+#logo img
+ {
+ height: 200px;
+ width: 200px;
+}
+/* Navigation */
+#menu
+ {
+     display: flex;
+	/* background-color:green; */
+	/*border : 3px solid #323130;*/
+	margin : auto;
+	padding : 10px;
+}
+label
+{
+	display: block;
+	width: 160px;
+	float: left;
+	
+}
+header nav ul
+{
+    list-style-type: none;
+    display: flex;
+
+}
+
+header nav li
+{
+    margin-right: 30px;
+
+}
+
+header nav a
+{
+    font-size: 1.3em;
+    color: blue;
+    padding-bottom: 3px;
+    text-decoration: none;
+		font-weight : 500;
+}
+
+header nav a:hover
+{
+    color: #323130;
+    border-bottom: 3px solid #323130;
+}
+
+/* Bannière */
+
+#ban_image
+{
+    margin-top: 15px;
+    height: 200px;
+    border-radius: 5px;
+    background: url('images/banner.jpg') no-repeat;
+    position: relative;
+    box-shadow: 0px 4px 4px #1c1a19;
+    margin-bottom: 25px;
+}
+
+/* Corps */
+
+section
+{
+    display: flex;
+    margin-bottom: 20px;
+}
+article, aside
+{
+    text-align: justify;
+}
+article
+{
+    margin-right: 20px;
+    flex: 3;
+}
+aside
+{
+    flex: 1.2;
+    position: relative;
+    background-color: rgb(73,77,244);
+    box-shadow: 0px 2px 5px #1c1a19;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 0.9em;
+}
+
+#img_bib
+{
+	 height: 100px;
+	 width: 100px;
+	     text-align: center;
+margin:auto;
+}
+
+#img_bib img
+{
+    
+	border: 1px solid #181818;
+}
+
+aside img
+{
+    margin-right: 5px;
+}
+#title
+{
+	    display: flex;
+		/* border: 1px solid #181818; */
+		
+
+}
+#img_titre
+{
+		height: 30px;
+		width: 30px;
+/* border: 1px solid #181818; */
+
+}
+#titre
+{
+		/* border: 1px solid #181818; */
+			padding : auto;
+	margin : 7px 0px 0px 1px;
+}
+footer
+{
+    display: flex;
+	/* background: url('images/banner.jpg') no-repeat; */
+	background-color: RGB(0,0,143);
+    height:70px;
+	width : auto;
+    justify-content: space-between;
+	position: relative;
+		/* border : 3px solid #323130; */
+}
+#end
+ {
+     display: flex;
+	/* background-color:green; */
+	/* border : 3px solid #323130; */
+	margin : auto;
+	padding : 20px;
+}
+footer nav ul
+{
+    list-style-type: none;
+    display: flex;
+
+}
+
+footer nav li
+{
+    margin-right: 100px;
+	
+}
+
+footer nav a
+{
+    font-size: 0.8em;
+    color: blue;
+    padding-bottom: 3px;
+    text-decoration: none;
+	    transition: border .25s linear;
+
+}
+
+footer nav a:hover
+{
+    color: white;
+    border-bottom: 3px solid #323130;
+}
+
+@media all and (max-width: 1024px)
+{
+    nav
+    {
+        width: auto;
+        text-align: left;
+    }
+    
+    nav ul
+    {
+        flex-direction: column;
+    }
+
+    nav li
+    {
+        padding-left: 4px;
+    }
+    
+    nav a
+    {
+        font-size: 1.1em;
+    }
+    
+    nav a:hover
+    {
+        border-bottom: 0;
+    }
+    #banniere_image
+    {
+        display: none;
+    }
+ section
+    {
+        flex-direction: column;
+    }
+
+    article, aside
+    {
+        width: auto;
+        margin-bottom: 15px;
+    }
+    
+    #ban_image
+    {
+        /* display: none; */
+		    margin-top: 15px;
+    height: 5px;
+    border-radius: 1Xpx;
+    background: url('images/banner.jpg') no-repeat;
+    position: relative;
+    box-shadow: 0px 0px 0px #1c1a19;
+    margin-bottom: 2px;
+    }
+    
+    #photo_zozor img
+    {
+        width: 110px;
+        float: right;
+        margin-left: 15px;
+    }
+    
+    aside p:last-child
+    {
+        text-align: center;
+    }
+	footer
+{
+
+    height:130px;
+
+}
+}
