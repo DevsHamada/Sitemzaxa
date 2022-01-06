@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+			<!-- appel fichier css --> 
+		<link rel="stylesheet" href= "CSS/style.css" />
+		<title>Structure de page</title>
+	</head>
+		<SCRIPT LANGUAGE="Javascript">
+var alea=Math.round(Math.random()*99)+1;
+var coup=0;
+function test(valeur)
+{
+	//Nombre d'essaie
+coup=coup+1;
+if (coup > 6)
+	{
+	partie=confirm("T'as perdu !\nIl fallait trouver : " + alea + "\nNouvelle partie ?");
+	if (partie)
+		{
+		document.form1.commentaire.value="Nouvelle partie...";
+		coup=0;
+		alea=Math.round(Math.random()*99)+1;
+		document.form1.coup.value=0;
+		valeur.value="";
+		}
+		else
+		{
+		window.close();
+		}
+	}
+	else
+	{
+	if (valeur.value < alea)
+		document.form1.commentaire.value="Trop petit !";
+	if (valeur.value > alea)
+		document.form1.commentaire.value="Trop grand !" ;
+	if (valeur.value == alea)
+		{document.form1.commentaire.value="Gagné !!!";
+		confirm("BRAVO! la réponse est : " + alea + "/nGangné avec " + coup + "essaie !");
+				document.form1.commentaire.value="Nouvelle partie...";
+		coup=0;
+		alea=Math.round(Math.random()*99)+1;
+		document.form1.coup.value=0;
+		valeur.value="";}
+	document.form1.coup.value=coup;
+	}
+}
+</SCRIPT>
+	<body>
+	<!-- commentaire --> 
+		<div id="bloc_page3">
+			<header>
+				<div id="logo">
+					<img src="images/Logo-Axa.jpg" alt = "AXA" />
+				</div>	
+				<nav>
+					<ul id="menu">
+					  <li><a href="index.html">Accueil</a></li>
+					  <li><a href="jeux.html">Espace Jeux</a></li>
+					  <li><a href="News.html">Espace News</a></li>
+					  <li><a href="#">Espace software</a></li>
+					  <li><a href="contact.html">Contactez-nous</a></li>		
+	  
+					</ul>
+				</nav>
+			</header>
+			<div id="ban_image">
+				<img src="images/banner.jpg" alt= "axa" />
+			</div>
+			<section>
+				<article>	
+				<div id="title"><div id="img_titre"><img src="images/axa_logo_solid_rgb.png" alt "Métier et chiffres clefs"/></div>
+					<h1 id="titre"> Le jeu du nombre mystérieu  </h1></div>			
+					<p>Le jeu consiste à trouver un nombre garder dans
+					la mémoire de l'ordinateur 
+					<fieldset>
+					<CENTER><FONT COLOR="BLUE" SIZE="6">
+					Cherchez un nombre entre 1 et 100 :  </p></CENTER></FONT>
+					<FORM NAME="form1">
+					<CENTER>Entrez un nombre : <INPUT TYPE="text" name="valeur" size=5 style="background-color=aqua;color=red"></CENTER><BR>
+					<CENTER><INPUT TYPE="Button" OnClick="test(valeur)" Value="Calcul"></CENTER>
+					<BR>
+					<CENTER><INPUT TYPE="text" name="commentaire" size=20 value="Bonne chance..."></CENTER>
+					<BR>
+					<CENTER>Coup Numéro : <INPUT TYPE="text" name="coup" size=3></CENTER>
+					</FORM>
+					</fieldset>
+				 	</article>	
+			</section>
+			<footer>
+					<nav>
+						<ul id="end">
+						  <li><a class="test1" href="#">Qui sommes-nous?</a></li>
+						  <li><a class="test1" href="#">Mentions légales</a></li>
+						  <li><a class="test1" href="#">CGU</a></li>
+						  <li><a class="test1" href="#">Politique de cookies</a></li>	
+						  <li><a class="test1" href="#">Données personnelles</a></li>	
+						</ul>				
+					</nav>
+					 <div id="2foot">
+						<p><img src="images/facebook.png" alt="Facebook" /><img src="images/twitter.png" alt="Twitter" /><img src="images/vimeo.png" alt="Vimeo" /><img src="images/rss.png" alt="RSS" /></p>
+					</div>    
+			</footer>
+		</div>   
+	</body>
+</html>
